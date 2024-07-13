@@ -1,22 +1,17 @@
-import React, { useState } from 'react';
-import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css';
+import React from 'react';
+import 'react-photo-view/dist/react-photo-view.css';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 const images = [
   { src: '/assets/images/Portfolio/1.jpg', alt: 'Description 1' },
   { src: '/assets/images/Portfolio/2.jpg', alt: 'Description 2' },
   { src: '/assets/images/Portfolio/3.jpg', alt: 'Description 3' },
   { src: '/assets/images/Portfolio/4.jpg', alt: 'Description 4' },
-  { src: '/assets/images/Portfolio/5.jpg', alt: 'Description 5' },
-  { src: '/assets/images/Portfolio/6.jpg', alt: 'Description 6' },
 ];
 
 function PortFolio() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [photoIndex, setPhotoIndex] = useState(0);
-
   return (
-    <div className='p-12 bg-gray-50'>
+    <div id="portfolio" className='p-12 bg-gray-50'>
       <div className="mt-20 mb-20">
         <div className="flex justify-center items-center">
           <div className="row">
@@ -41,34 +36,16 @@ function PortFolio() {
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {images.map((image, index) => (
-            <div
-              key={index}
-              className="transition-transform transform hover:scale-105 bg-gray-300 flex items-center justify-center h-72 cursor-pointer"
-              onClick={() => {
-                setPhotoIndex(index);
-                setIsOpen(true);
-              }}
-            >
-              <img src={image.src} alt={image.alt} className="w-full h-full object-cover" />
-            </div>
-          ))}
+          <PhotoProvider>
+            {images.map((image, index) => (
+              <PhotoView key={index} src={image.src}>
+                <div className="transition-transform transform hover:scale-105 bg-gray-300 flex items-center justify-center h-72 cursor-pointer">
+                  <img src={image.src} alt={image.alt} className="w-full h-full object-cover" />
+                </div>
+              </PhotoView>
+            ))}
+          </PhotoProvider>
         </div>
-
-        {isOpen && (
-          <Lightbox
-            mainSrc={images[photoIndex].src}
-            nextSrc={images[(photoIndex + 1) % images.length].src}
-            prevSrc={images[(photoIndex + images.length - 1) % images.length].src}
-            onCloseRequest={() => setIsOpen(false)}
-            onMovePrevRequest={() =>
-              setPhotoIndex((photoIndex + images.length - 1) % images.length)
-            }
-            onMoveNextRequest={() =>
-              setPhotoIndex((photoIndex + 1) % images.length)
-            }
-          />
-        )}
       </div>
     </div>
   );

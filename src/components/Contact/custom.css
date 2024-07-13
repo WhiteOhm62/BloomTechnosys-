@@ -1,0 +1,7 @@
+.custom-placeholder::placeholder {
+    position: absolute;
+    top: 0;
+    left: 1;
+    transform: translate(0, 0);
+  }
+  

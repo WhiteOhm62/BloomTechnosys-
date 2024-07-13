@@ -41,7 +41,9 @@ function App() {
       <Statistics/>
       <Suscribe/>
       <Blogs/>
+      <Contact/>
       <Map/>
+      
 
       {/* <Contact/> */}
    
