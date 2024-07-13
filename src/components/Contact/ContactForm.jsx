@@ -11,7 +11,7 @@ function ContactForm() {
     const formData = { name, email, message };
   
     try {
-      const response = await fetch('http://localhost:3000/submit', {
+      const response = await fetch('https://bloomtechnosys-backend.onrender.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
