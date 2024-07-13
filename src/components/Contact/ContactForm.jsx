@@ -7,18 +7,18 @@ function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     const formData = { name, email, message };
-  
+
     try {
-      const response = await fetch('https://bloomtechnosys-backend.onrender.com/localhost:3000/submit', {
+      const response = await fetch('https://bloomtechnosys-backend.onrender.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
-  
+
       if (response.ok) {
         alert('Message sent successfully!');
         setName('');
@@ -31,9 +31,6 @@ function ContactForm() {
       console.error('Error sending message:', error);
       alert('Failed to send message. Please try again later.');
     }
-  };
-  const handleChange = (e) => {
-    setEmail(e.target.value);
   };
 
   return (
@@ -53,7 +50,7 @@ function ContactForm() {
             className='w-[300px] h-10 mr-4 rounded-md p-2'
             placeholder='Email'
             value={email}
-            onChange={handleChange}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>
