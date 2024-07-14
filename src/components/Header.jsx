@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import logo from '/assets/images/logo.png'; // Adjust the path if necessary
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,12 +20,11 @@ const Header = () => {
     };
   }, []);
 
+  
   const scrollToSection = (id) => {
+    console.log('Scrolling to:', id); // Check if 'home' is correctly detected
     if (id === '/') {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      scroll.scrollToTop({ smooth: true });
     } else {
       const element = document.getElementById(id);
       if (element) {
@@ -39,17 +39,17 @@ const Header = () => {
       className={`fixed top-0 left-0 w-full flex justify-around items-center p-5 transition-colors duration-300 ${isScrolled ? 'bg-white text-black' : 'bg-transparent text-white'}`} 
       style={{ height: '90px', zIndex: 10 }}
     >
-      <div className="flex items-center ">
-        <img src={logo} alt="Bloomtech Logo" className="h-12 w-auto mr-3" />
+      <div className="flex items-center">
+        <img src={logo} alt="Bloomtech Logo" className="h-12 w-auto mr-3 cursor-pointer" onClick={() => scrollToSection('home')} />
       </div>
       <nav>
         <ul className="flex space-x-6">
-        <li><a href="#home" onClick={() => scrollToSection('/')}>Home</a></li>
-          <li><a href="#about" onClick={() => scrollToSection('about')}>About</a></li>
-          <li><a href="#services" onClick={() => scrollToSection('services')}>Services</a></li>
-          <li><a href="#portfolio" onClick={() => scrollToSection('portfolio')}>Portfolio</a></li>
-          <li><a href="#blog" onClick={() => scrollToSection('blog')}>Blog</a></li>
-          <li><a href="#contact" onClick={() => scrollToSection('contact')}>Contact</a></li>
+          <li><ScrollLink to="/" smooth={true} className="cursor-pointer hover:text-gray-500">Home</ScrollLink></li>
+          <li><ScrollLink to="about" smooth={true} className="cursor-pointer hover:text-gray-500">About</ScrollLink></li>
+          <li><ScrollLink to="services" smooth={true} className="cursor-pointer hover:text-gray-500">Services</ScrollLink></li>
+          <li><ScrollLink to="portfolio" smooth={true} className="cursor-pointer hover:text-gray-500">Portfolio</ScrollLink></li>
+          <li><ScrollLink to="blog" smooth={true} className="cursor-pointer hover:text-gray-500">Blog</ScrollLink></li>
+          <li><ScrollLink to="contact" smooth={true} className="cursor-pointer hover:text-gray-500">Contact</ScrollLink></li>
         </ul>
       </nav>
     </header>

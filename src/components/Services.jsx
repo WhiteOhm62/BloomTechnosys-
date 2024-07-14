@@ -7,14 +7,14 @@ function Services() {
   return (
     <>
       <div id="services" className='mt-20 mb-20'>
-        <div class="flex justify-center items-center">
-          <div class="row">
-            <div class="main_featured m-top-100">
-              <div class="col-sm-12">
-                <div class=" text-center">
+        <div className="flex justify-center items-center">
+          <div className="row">
+            <div className="main_featured m-top-100">
+              <div className="col-sm-12">
+                <div className=" text-center">
                   <h2 className='text-4xl text-black mb-5'>OUR SERVICES</h2>
                   <p className="h-1 bg-red-400 w-72 ml-[615px] mb-10"></p>
-                  <div class="separator_auto"></div>
+                  <div className="separator_auto"></div>
                   <p className='text-sm text-gray-600 p-4 ml-80 mr-80'>Crafting dynamic and user-friendly websites, delivering impactful mobile applications across platforms, and empowering individuals and teams with essential tech skills through expert-led training at BloomTechnosys.Crafting dynamic and user-friendly websites, delivering impactful mobile applications across platforms, and empowering individuals and teams with essential tech skills through expert-led training at BloomTechnosys. </p>
                 </div>
               </div>

@@ -12,6 +12,11 @@ import Suscribe from './components/Suscribe'
 import Blogs from './components/Blogs/Blogs'
 import Map from './components/Map'
 import Contact from './components/Contact/Contact'
+import 'smoothscroll-polyfill';
+
+// Optionally, apply the polyfill globally
+window.__forceSmoothScrollPolyfill__ = true;
+
 
 
 function App() {
@@ -29,7 +34,7 @@ function App() {
   ];
 
   return (
-    <div>
+    <div id='/'>
       <Header/>
       <HeroSection/>
       <About/>
