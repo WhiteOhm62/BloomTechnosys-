@@ -21,7 +21,7 @@ function PortFolio() {
                   <h2 className="text-4xl text-black mb-5">OUR PORTFOLIO</h2>
                   <p className="h-1 bg-red-400 w-72 mx-auto mb-10"></p>
                   <div className="separator_auto"></div>
-                  <p className="text-sm text-gray-600 p-4 mx-auto max-w-4xl">
+                  <p className="text-[16px] text-gray-600 p-4 mx-auto max-w-4xl">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
                   </p>
                 </div>
@@ -32,10 +32,10 @@ function PortFolio() {
       </div>
 
       <div className="container mx-auto px-4 py-8">
-        <p className="text-center mb-8 text-gray-700">
+        <p className="text-center text-lg mb-8 text-gray-700">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 gap-4">
           <PhotoProvider>
             {images.map((image, index) => (
               <PhotoView key={index} src={image.src}>

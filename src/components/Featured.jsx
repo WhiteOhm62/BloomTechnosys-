@@ -9,9 +9,9 @@ function Featured() {
 					<div className="col-sm-12">
 						<div className=" text-center">
 							<h2 className='text-4xl text-black mb-5'>FEATURED WORK</h2>
-                             <p className="h-1 bg-red-400 w-72 ml-[615px] mb-10"></p>
+							<div className="h-1 bg-red-400 w-72 mx-auto mb-10"></div>
 							<div className="separator_auto"></div>
-							<p className='text-sm text-gray-600 p-4 ml-80 mr-80'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+							<p className='text-[16px] text-gray-600 px-4 lg:ml-80 lg:mr-80'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
 								nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
 								consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
 								nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo

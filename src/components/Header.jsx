@@ -46,7 +46,7 @@ const Header = () => {
       className={`fixed top-0 left-0 w-full flex justify-between items-center p-5 transition-colors duration-300 ${isScrolled ? 'bg-white text-black' : 'bg-transparent text-white'}`} 
       style={{ height: '90px', zIndex: 30 }}
     >
-      <div className="flex items-center">
+      <div className="flex items-center md: text-center">
         <img src={logo} alt="Bloomtech Logo" className="h-12 w-auto mr-3 cursor-pointer" onClick={() => scrollToSection('home')} />
       </div>
       <nav className="hidden md:flex space-x-6">

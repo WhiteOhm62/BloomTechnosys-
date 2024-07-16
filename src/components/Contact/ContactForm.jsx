@@ -34,12 +34,12 @@ function ContactForm() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <div className='mt-20 w-full'>
+    <div className="mt-20">
+      <form onSubmit={handleSubmit} className="w-full md:w-[617px] mx-auto">
+        <div className='flex flex-col md:flex-row md:justify-between'>
           <input
             type="text"
-            className='w-[300px] h-10 mr-4 rounded-md p-2'
+            className='w-full md:w-[300px] h-10 mb-4 md:mr-4 rounded-md p-2'
             placeholder='Name'
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -47,27 +47,23 @@ function ContactForm() {
           />
           <input
             type="email"
-            className='w-[300px] h-10 mr-4 rounded-md p-2'
+            className='w-full md:w-[300px] h-10 mb-4 md:mr-4 rounded-md p-2'
             placeholder='Email'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>
-        <div>
-          <textarea
-            className='w-[617px] h-32 mr-4 rounded-md p-2 align-top mt-5 mb-5 custom-placeholder'
-            placeholder='Message'
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <button type="submit" className='btn btn-primary bg-red-400 text-white px-6 py-2 rounded-md hover:bg-red-500 transition duration-300 w-[617px]'>
-            Submit
-          </button>
-        </div>
+        <textarea
+          className='w-full md:w-[617px] h-32 rounded-md p-2 mb-5 custom-placeholder'
+          placeholder='Message'
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          required
+        />
+        <button type="submit" className='btn btn-primary mb-10 bg-red-400 text-white px-6 py-2 rounded-md hover:bg-red-500 transition duration-300 w-full md:w-[617px]'>
+          Submit
+        </button>
       </form>
     </div>
   );

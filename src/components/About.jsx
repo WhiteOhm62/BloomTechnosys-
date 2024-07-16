@@ -12,13 +12,12 @@ const About = () => {
 
   return (
     <section id="about" className="about py-20 bg-white">
-      <div className="container mx-auto ">
-        <div className="flex flex-wrap ml-20 mr-20">
-          <div className="w-full md:w-1/2 px-4 ">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-wrap">
+          <div className="w-full md:w-1/2 px-4 mb-8 md:mb-0">
             <div className="about_content">
               <h2 className="text-4xl font-bold mb-4">ABOUT US</h2>
               <div className="h-1 bg-red-400 w-44 mb-6"></div>
-
               <p className="text-lg mb-6 text-gray-700">
                 BloomTechnosys is a leading software development company dedicated to delivering
                 high-quality, optimized solutions at affordable rates. Specializing in a wide range
@@ -27,7 +26,6 @@ const About = () => {
                 sizes. Whether you're a startup or an established enterprise, BloomTechnosys ensures
                 your software needs are met with precision and excellence.
               </p>
-
               <div className="about_btns mt-10">
                 <a href="#" className="btn btn-primary bg-red-400 text-white px-6 py-2 rounded-md hover:bg-red-500 transition duration-300">Contact Us</a>
               </div>
@@ -61,13 +59,13 @@ const About = () => {
           </div>
         </div>
 
-        <div className="my-20 border-t border-gray-300 p-20">
+        <div className="my-20 border-t border-gray-300 pt-20">
           <div className="flex flex-wrap">
             <div className="w-full md:w-1/3 px-4 mt-6">
               <div className="about_bottom_item">
                 <div className="ab_head flex items-start">
                   <div className="ab_head_icon bg-red-400 border-4 border-red-300 text-white w-16 h-16 flex items-center justify-center rounded-full shadow-lg mr-4">
-                    <FaFire/>
+                    <FaFire />
                   </div>
                   <h6 className="text-xl font-semibold mt-4">WE’RE CREATIVE</h6>
                 </div>
@@ -82,7 +80,7 @@ const About = () => {
               <div className="about_bottom_item">
                 <div className="ab_head flex items-start">
                   <div className="ab_head_icon bg-red-400 border-4 border-red-300 text-white w-16 h-16 flex items-center justify-center rounded-full shadow-lg mr-4">
-                   <IoIosChatbubbles/>
+                    <IoIosChatbubbles />
                   </div>
                   <h6 className="text-xl font-semibold mt-4">WE'RE FRIENDLY</h6>
                 </div>
@@ -97,7 +95,7 @@ const About = () => {
               <div className="about_bottom_item">
                 <div className="ab_head flex items-start">
                   <div className="ab_head_icon bg-red-400 border-4 border-red-300 text-white w-16 h-16 flex items-center justify-center rounded-full shadow-lg mr-4">
-                   <FaHeart/>
+                    <FaHeart />
                   </div>
                   <h6 className="text-xl font-semibold mt-4">WE LOVE MINIMALISM</h6>
                 </div>

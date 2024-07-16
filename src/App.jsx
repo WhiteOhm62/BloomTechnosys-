@@ -28,7 +28,6 @@ function App() {
     '/assets/images/Portfolio/1.jpg',
     '/assets/images/Portfolio/1.jpg',
     '/assets/images/Portfolio/1.jpg',
-
     // Add more image URLs as needed
   ];
 
