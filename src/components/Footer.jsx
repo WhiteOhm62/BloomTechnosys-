@@ -64,7 +64,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="text-sm mt-8 text-center text-gray-400">
+        <div className="md:text-sm lg:text-lg mt-8 text-center text-gray-400">
           || &copy; {new Date().getFullYear()} BLOOMTECHNOSYS  | All rights reserved.  ||
         </div>
       </div>
